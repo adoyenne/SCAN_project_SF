@@ -1,0 +1,23 @@
+# Для Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+*.env
+
+# Для Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Для IDE и редакторов
+.idea/
+.vscode/
+
+# Для операционной системы
+.DS_Store
+Thumbs.db
+
+# Лог файлы
+*.log

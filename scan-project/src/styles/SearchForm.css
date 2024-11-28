@@ -1,0 +1,256 @@
+.search-form {
+  position: absolute;
+  width: 1440px;
+  height: 1122px;
+  background: #ffffff;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+
+.header-container {
+  position: absolute;
+  left: 60px;
+  top: 117px;
+  width: 1298px;
+  max-width: 800px; /* Ширина, при которой текст будет переноситься */
+  word-wrap: break-word; /* Разрешить перенос длинных слов, если нужно */
+}
+
+.main-header {
+  font-family: "Ferry", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.sub-header {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 15px;
+  color: #000000;
+}
+
+.header-image {
+  position: absolute;
+}
+
+.document {
+  left: 130.14%;
+  top: 20.05%;
+}
+
+.folders {
+  left: 170.99%;
+  top: 21.66%;
+}
+
+.group-image {
+  left: 1000px;
+  top: 170px;
+  width: 462.57px;
+  height: 490.21px;
+}
+
+/* Основные стили формы */
+.form-container {
+  position: absolute;
+  bottom: 200px;
+  left: 60px;
+  width: 600px;
+  padding: 50px;
+  height: 320px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для полей формы */
+.form-group {
+  position: absolute;
+  margin-bottom: 15px;
+  width: 300px;
+  bottom: 15px;
+  padding: 15px;
+  flex-direction: column;
+}
+
+/* Стили для полей формы */
+.form-group-row {
+  display: relative;
+  margin-bottom: -15px;
+  margin-top: -15px;
+  width: 200px;
+  padding: 15px;
+  flex-direction: column; /* Расположение элементов друг под другом */
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input,
+select {
+  width: 50%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.date-range {
+  display: flex;
+  gap: 15px;
+}
+
+.date-range input {
+  width: calc(60% - 10px);
+}
+
+/* Контейнер для чекбоксов */
+.checkbox-group {
+  position: absolute; /* Устанавливаем относительное позиционирование для последующего изменения положения */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 300px;
+  top: 50px;
+}
+
+/* Элементы чекбоксов */
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative; /* Устанавливаем для каждого чекбокса возможность позиционирования относительно своего контейнера */
+  left: 20px; /* Сдвигаем отдельные чекбоксы на 20px вправо */
+}
+
+
+/* Убираем стандартную галочку */
+.checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  appearance: none;
+  border: 2px solid #ccc; /* Добавляем серую границу */
+  border-radius: 3px; /* Скругление углов */
+  background-color: #fff; /* Белый фон */
+  position: relative; /* Для позиционирования изображения галочки */
+  display: inline-block; /* Чтобы чекбокс отображался как блок */
+}
+
+/* Стили для серого текста, когда чекбокс не выбран */
+.checkbox-item label.inactive {
+  color: gray; /* Серый цвет текста */
+}
+
+/* Убираем фоновый цвет, оставляем только зелёную границу */
+.checkbox-item input[type="checkbox"]:checked {
+  border-color: #4caf50; /* Зеленая граница при выборе */
+}
+
+/* Позиционирование картинки с галочкой внутри чекбокса */
+.checkbox-item img.check-icon {
+  display: none; /* По умолчанию галочка скрыта */
+  position: absolute;
+  top: 10%;  /* Позиционируем по вертикали */
+  left: 1%; /* Позиционируем по горизонтали */
+  transform: translate(0%, 0%); /* Центрируем картинку */
+  width: 16px;
+  height: 16px;
+  pointer-events: none; /* Отключаем события на галочке */
+
+}
+
+/* Показываем изображение галочки, когда чекбокс выбран */
+.checkbox-item input[type="checkbox"]:checked + label + img.check-icon {
+  display: inline; /* Показываем изображение галочки при выбранном чекбоксе */
+}
+
+/* Скрываем галочку, когда чекбокс не выбран */
+.checkbox-item input[type="checkbox"]:not(:checked) + label + img.check-icon {
+  display: none; /* Галочка скрыта, когда чекбокс не выбран */
+}
+
+/* Кнопка поиска */
+.search-button-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Кнопка поиска */
+.search-button {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background: #5970FF;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  bottom: 45px;
+  left: 420px;
+}
+
+.search-button:hover {
+  opacity: 1;
+}
+
+/* Стили для неактивной кнопки (затуманенной) */
+.search-button:disabled {
+  background-color: #5970FF; /* Серый фон для неактивной кнопки */
+  color: #fff; /* Серый цвет текста */
+  cursor: not-allowed; /* Курсор "не доступно" */
+  opacity: 0.6; /* Уменьшенная яркость */
+}
+
+.required-fields-notice {
+  font-size: 12px;
+  color: #555555;
+  margin-top: 10px;
+}
+
+
+
+/* Ошибки */
+.input-field.error {
+  border: 2px solid #ff4d4f;
+  background-color: #fff5f5;
+}
+
+.error-message {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #ff4d4f;
+  visibility: hidden; /* По умолчанию скрыто */
+  height: 20px;
+
+}
+
+.error-message.active {
+  visibility: visible; /* Показываем сообщение */
+}
+
+.required-note {
+  position: absolute;
+  top: 380px;
+  left: 73.5%;
+  transform: translateX(-50%); /* Корректировка из-за абсолютного позиционирования */
+  font-family: 'Inter', sans-serif; /* Шрифт */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+  color: #949494; /* Серый цвет */
+}
+

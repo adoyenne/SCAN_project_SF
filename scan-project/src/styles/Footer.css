@@ -1,0 +1,119 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Высота экрана */
+  width: 100%; /* Ширина экрана */
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Контейнер для всей страницы */
+#root, .page-container {
+  display: flex;
+  flex-direction: column; /* Контент сверху, футер снизу */
+  min-height: 100vh; /* Растягиваем контейнер на высоту экрана */
+  box-sizing: border-box;
+}
+
+/* Основной контент страницы */
+.page-content {
+  flex: 1; /* Занимает оставшееся пространство между header и footer */
+  overflow-y: auto; /* Обеспечиваем прокрутку, если контента слишком много */
+}
+
+/* Основной контейнер футера */
+.footer {
+  width: 100%; /* Растягиваем футер на всю ширину */
+  height: 137px;
+  background: #029491;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+/* Логотип */
+.footer-logo img {
+  width: 141px;
+  height: 141px;
+  position: relative;
+  top: -2px;
+}
+
+/* Контейнер для текста */
+.footer-text {
+  text-align: right;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  line-height: 17px;
+}
+
+/* Адрес */
+.footer-address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+/* Телефон */
+.footer-phone {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  margin: 5px 0 0;
+}
+
+/* Email */
+.footer-email {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  margin: 5px 0 0;
+}
+
+/* Копирайт */
+.footer-copyright {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  margin-top: 20px;
+}
+
+
+/* --- Мобильная версия --- */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Логотип и текст вертикально */
+    align-items: center; /* Центрируем содержимое */
+    justify-content: center;
+    height: 137px;
+    width: 375px; /* Соответствует ширине экрана мобильного устройства */
+    padding: 20px;
+  }
+
+  .footer-logo img {
+    width: 100px; /* Уменьшаем размер логотипа */
+    height: auto;
+    margin-bottom: 15px; /* Отступ от текста */
+  }
+
+  .footer-text {
+    text-align: center; /* Центрируем текст */
+    line-height: 1.5; /* Увеличиваем интервал между строками */
+  }
+
+  .footer-address,
+  .footer-phone,
+  .footer-email,
+  .footer-copyright {
+    font-size: 12px; /* Уменьшаем шрифт для мобильных устройств */
+    margin: 5px 0; /* Минимальный отступ между строками */
+  }
+}

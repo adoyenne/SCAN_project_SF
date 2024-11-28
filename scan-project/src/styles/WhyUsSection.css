@@ -1,0 +1,169 @@
+.why-us-section {
+  position: relative;
+  width: 1346px;
+  height: 1000px;
+  left: -80px;
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 30px;
+}
+
+/* Заголовок */
+.why-us-title {
+  position: relative;
+  width: 743px;
+  height: 54px;
+  font-family: 'Ferry', sans-serif;
+  font-style: bold;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 54px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+/* Контейнер карусели */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 130%;
+  max-width: 1550px;
+  height: 225px;
+  overflow: hidden; /* Скрываем элементы, выходящие за пределы */
+}
+
+/* Треки карусели */
+.carousel-track {
+  display: flex;
+  position: relative;
+  width: 80%; /* Трек занимает всю доступную ширину */
+  height: 90%;
+  transition: transform 1s ease; /* Плавное перемещение */
+  justify-content: center; /* Выравниваем карточки по центру */
+}
+
+/* Элементы карусели */
+.carousel-item {
+  width: 35%; /* Каждая карточка занимает 1/3 ширины контейнера */
+  height: 180px;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2), 0px -4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+  position: absolute; /* Оставляем абсолютное позиционирование */
+  margin: 0 40px; /* Добавляем расстояние между карточками */
+
+}
+
+
+
+/* Иконка внутри контейнера */
+.carousel-icon {
+  position: absolute;
+  left: 10px; /* Отступ от левого края */
+  top: 10px;  /* Отступ от верхнего края */
+  object-fit: contain; /* Сохраняем пропорции иконки */
+  z-index: 1; /* Иконка будет поверх фона */
+}
+
+.carousel-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-align: left;
+  max-width: 313px;
+  margin-top: 20px;
+  position: absolute;
+   left: 15px; /* Смещаем текст немного влево */
+  top: 40%; /* Смещаем текст ниже */
+}
+
+
+.carousel-arrow {
+  position: absolute;
+  top: 40%;
+  width: 39px;
+  height: 39px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  background-size: contain; /* Обеспечиваем корректное отображение изображения */
+  background-repeat: no-repeat;
+}
+
+.carousel-arrow:hover {
+  opacity: 0.7;
+}
+
+.left-arrow {
+  left: 20px;
+  transform: rotate(180deg); /* Переворачиваем стрелочку на 180 градусов */
+  z-index: 1; /* Иконка будет поверх фона */
+}
+
+.right-arrow {
+  right: 20px;
+  z-index: 1; /* Иконка будет поверх фона */
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+  /* Секцию .why-us-section делаем более компактной для мобильных устройств */
+  .why-us-section {
+    width: 100%;
+    height: auto;
+    left: 0;
+    margin-top: 100px; /* Уменьшаем отступ сверху */
+    padding-top: 20px; /* Меньше отступ сверху */
+  }
+
+  /* Заголовок .why-us-title для мобильных */
+  .why-us-title {
+    width: 100%;
+    font-size: 28px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* Контейнер карусели для мобильных устройств */
+  .carousel-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Треки карусели на мобильных */
+  .carousel-track {
+    width: 100%; /* Заполняем всю ширину контейнера */
+    justify-content: flex-start; /* Выравнивание по левому краю */
+  }
+
+  /* Элементы карусели на мобильных */
+  .carousel-item {
+    width: 100%; /* Каждая карточка занимает 100% ширины контейнера */
+    margin: 0; /* Убираем внешние отступы */
+  }
+
+  /* Стрелки карусели на мобильных */
+  .carousel-arrow {
+    top: 45%;
+    width: 30px; /* Меньше размер стрелок */
+    height: 30px;
+  }
+}

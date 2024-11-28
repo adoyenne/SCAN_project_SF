@@ -1,0 +1,400 @@
+/* Основной контейнер */
+.search-results {
+  position: relative;
+  width: 1440px;
+  height: 1967px;
+  background: #ffffff;
+}
+
+/* Картинка */
+.img-girl {
+  position: absolute;
+  width: 552.56px;
+  height: 369px;
+  left: 1000px;
+  top: 40px;
+}
+
+/* Заголовок */
+.text-container {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  width: 509px;
+}
+
+.text-container h1 {
+  font-family: 'Ferry', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.text-container p {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 16px;
+}
+
+/* Единый контейнер для карусели заголовка и количества вариантов */
+.search-message-container {
+  position: absolute;
+  width: 509px;
+  height: 180px;
+  top: 400px;
+  left: 60px;
+  text-align: left;
+}
+
+/* Заголовок карусели */
+.search-message-container h2 {
+  font-family: 'Ferry', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin: 0;
+}
+
+/* Текст с количеством вариантов */
+.search-message-container p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #949494;
+  margin-top: 8px;
+}
+
+/* Карусель */
+.carousel {
+  position: absolute;
+  top: 519px;
+  left: 93px;
+  width: 1490px;
+  height: 210px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden; /* Скрываем все, что выходит за пределы контейнера */
+  background: #ffffff;
+  border: 2px solid #029491;
+  border-radius: 10px;
+
+}
+
+.sidebar {
+  position: absolute;
+  width: 135px;
+  height: 102%;
+  background: #029491;
+  border-radius: 10px 0 0 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1; /* Задаём z-index для карусели, чтобы стрелки могли быть поверх */
+}
+
+.sidebar p {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Контент внутри карусели */
+.carousel-content {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 133px; /* Сдвигаем вбок для учёта боковой панели */
+  height: 150%;
+  align-items: center;
+}
+
+.carousel-column {
+  text-align: center;
+  width: 150px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-right: 1px solid #949494;
+}
+
+.carousel-column:last-child {
+  border-right: none;
+}
+
+.carousel-column p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+/* Основной контейнер для стрелок */
+.arrow-container {
+  position: absolute;
+  top: 31.1%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between; /* Стрелки по краям */
+  transform: translateY(-60%); /* Центрируем стрелки по вертикали */
+  position: relative;
+}
+
+.arrow {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.arrow.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Левая стрелка */
+.arrow.left {
+  position: absolute;
+  left: 50px; /* Сдвигаем левую стрелку */
+  transform: rotate(180deg); /* Переворачиваем картинку для левой стрелки */
+}
+
+/* Правая стрелка */
+.arrow.right {
+  position: absolute;
+  right: -190px;
+}
+
+.loader-spin-res {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(50%, 50%);
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 10000;
+  animation: rotate 1s linear infinite; /* Анимация вращения */
+}
+
+/* Анимация вращения для спиннера */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+.list-title {
+  /* Список документов */
+
+position: absolute;
+width: 447px;
+height: 36px;
+left: 60px;
+top: 836px;
+
+font-family: 'Ferry';
+font-style: normal;
+font-weight: 900;
+font-size: 30px;
+line-height: 36px;
+letter-spacing: 0.02em;
+
+color: #000000;
+
+}
+
+/* Контейнер для карточек */
+.cards-container {
+  display: grid; /* Используем CSS Grid для размещения карточек */
+  grid-template-columns: repeat(2, 1fr); /* Два столбца с одинаковой шириной */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 920px; /* Сдвигаем контейнер с карточками */
+  left: 120px;
+  width: 100%; /* Обеспечиваем, чтобы контейнер занимал всю ширину */
+  gap: 20px; /* Расстояние между карточками */
+  box-sizing: border-box; /* Включаем padding в размер карточки */
+}
+
+/* Карточка */
+.document-card {
+  width: 641px; /* Ширина карточки */
+  height: 694px; /* Высота карточки */
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Тень для карточки */
+  border-radius: 10px; /* Скругленные углы */
+  padding: 20px; /* Отступы внутри карточки */
+
+
+}
+
+/* Шапка карточки */
+.card-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.publish-date {
+  margin-right: 10px;
+}
+
+.source-link {
+  color: #5970FF;
+  text-decoration: none;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+/* Заголовок публикации */
+.document-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  margin: 10px 0;
+}
+
+/* Теги */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tech-news {
+  background-color: #5970FF;
+  color: white;
+}
+
+.announcement {
+  background-color: #FF9F00;
+  color: white;
+}
+
+.digest {
+  background-color: #00BFFF;
+  color: white;
+}
+
+.document-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  max-height: 17px;
+  overflow: hidden; /* Скрывает текст, выходящий за пределы */
+  text-overflow: ellipsis; /* Добавляет многоточие */
+}
+
+/* Изображения */
+.document-images img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Кнопка "Читать в источнике" */
+.source-button {
+  display: inline-block;
+  background-color: #7CE3E1;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  justify-self: start;
+  align-self: end; /* Прижать кнопку к низу */
+}
+
+.source-button:hover {
+  background-color: #4A5DC7;
+}
+
+/* Количество слов */
+.word-count {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #888;
+  margin-left: 550px;
+  position: flex; /* Абсолютное позиционирование */
+  bottom: 40px;
+}
+
+/* Контейнер для кнопки "Показать больше" */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top:30px;
+  margin-bottom: 50px;
+  position: relative;
+  left: 346px;
+
+}
+
+/* Кнопка "Показать больше" */
+.load-more-button {
+  width: 305px;
+  height: 59px;
+  background: #5970FF;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position:relative;
+  transition: background 0.3s ease;
+}
+
+
+.load-more-button:hover {
+  background: #4A5DC7; /* Темнее при наведении */
+}
+
+.load-more-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+
+
+

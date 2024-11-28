@@ -1,0 +1,198 @@
+/* Главная страница */
+@font-face {
+  font-family: "Ferry";
+  src: url("../assets/ferry_black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.home-page-wrapper {
+  position: relative;
+  width: 1440px;
+  height: 2867px;
+  background: #FFFFFF;
+  margin: 0 auto; /* Центрируем контейнер */
+}
+
+.home-page-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* Welcome Section */
+.welcome-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 1320px;
+  height: 620px;
+  left: -110px;
+  top: -100px;
+}
+
+.welcome-text {
+  position: absolute;
+  left: 60px;
+  top: 162px;
+  width: 743px;
+}
+
+/* Upper text (h1) */
+.welcome-text h1 {
+  font-family: 'Ferry', sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Lower text (p) */
+.welcome-text p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.request-button {
+  position: absolute;
+  width: 335px;
+  height: 59px;
+  left: 60px;
+  top: 588px;
+  background: #5970FF; /* Исходный цвет кнопки */
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  margin-left: -60px; /* Немного сдвигаем влево */
+  pointer-events: auto;
+  z-index: 1;
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Плавный переход */
+}
+
+.request-button:hover {
+  opacity: 1;
+  background-color: #4c60e4; /* Новый цвет фона при наведении (темнее синий) */
+}
+
+
+.welcome-image img {
+  position: absolute;
+  width: 800px;
+  height: 750px;
+  left: 800px;
+  top: 150px;
+  object-fit: cover;
+  background: #FFFFFF;
+  z-index: 1; /* Позиционируем изображение поверх */
+}
+
+.group-14-image img {
+  position: absolute;
+  width: 1307px;
+  height: 575.52px;
+  left: 20px;
+  top: 1350px;
+
+
+}
+
+
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+  /* Главная страница */
+  .home-page-wrapper {
+    width: 100%;
+    height: auto; /* Убираем жестко заданную высоту для мобильной версии */
+  }
+
+  /* Контейнер для всей страницы */
+  .home-page-container {
+    padding: 20px; /* Отступы по краям */
+  }
+
+  /* Welcome Section: делаем элементы вертикальными */
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .welcome-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Заголовок (h1) */
+  .welcome-text h1 {
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+
+  /* Подзаголовок (p) */
+  .welcome-text p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  /* Кнопка запроса данных */
+  .request-button {
+    width: 100%;
+    max-width: 335px; /* Ограничиваем максимальную ширину кнопки */
+    height: 59px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* Изображение: адаптируем для телефонов*/
+  .welcome-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 20px;
+  }
+
+  /* Изображение группы: адаптируем для телефонов */
+  .group-14-image img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

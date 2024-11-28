@@ -1,0 +1,290 @@
+/* Основная шапка */
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 93px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Логотип */
+.logo img {
+  width: 141px;
+  height: auto;
+}
+
+/* Навигация */
+.navigation {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  left: -100px;
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Секция авторизации */
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ссылка "Зарегистрироваться" */
+.register-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+/* Разделитель */
+.divider {
+  width: 2px;
+  height: 26px;
+  background: rgba(2, 148, 145, 0.6);
+}
+
+/* Кнопка "Войти" */
+.login-button {
+  background: #7CE3E1;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+/* Информация о пользователе */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.limit-panel {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  left: 1076px;
+  top: 25px;
+  background: rgba(217, 217, 217, 0.5);
+  border-radius: 5px;
+  z-index: 0;
+}
+
+/* Текст "Использовано компаний" */
+.limit-info-title {
+  position: absolute;
+  width: 200px;
+  height: 12px;
+  left: 10px;
+  top:2px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  color: #000000;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+/* Текст "Лимит по компаниям" */
+.limit-info-subtitle {
+  position: absolute;
+  width: 200px;
+  height: 12px;
+  left: 31px;
+  top: 26px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  color: #000000;
+  opacity: 0.4;
+}
+
+/* Число "Использовано компаний" */
+.limit-used-count {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  left: 169px;
+  top: -4px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+/* Число "Лимит по компаниям" */
+.limit-total-count {
+  position: absolute;
+  width: 27px;
+  height: 17px;
+  left: 169px;
+  top: 19.5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  color: #8AC540;
+}
+
+/* Имя пользователя */
+.user-name {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+  width: 200px;
+  height: 12px;
+  left: 1505px;
+  top: 40px;
+}
+
+/* Аватар */
+.avatar {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #D9D9D9;
+  left: 1570px;
+  top: 37px;
+}
+
+/* Кнопка "Выйти" */
+.logout-button {
+  position: absolute;
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  width: 200px;
+  height: 12px;
+  left: 1450px;
+  top: 55px;
+}
+
+/* Стиль для спиннера (только для загрузки) */
+.loader-spin {
+  position: absolute;
+  top: 10%;
+  left: 38%;
+  transform: translate(50%, 50%);
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 10000;
+  animation: rotate 1s linear infinite; /* Анимация вращения */
+}
+
+/* Анимация вращения для спиннера */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Стиль для сообщения об ошибке */
+.error-text {
+  position: absolute;
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+  width: 200px;
+  height: 12px;
+  left: 1100px;
+  top: 40px;
+}
+
+
+/* Гамбургер */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  background: #000;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 93px;
+  right: 0;
+  background: #FFFFFF;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  .navigation,
+  .auth-section {
+    display: none; /* Скрываем навигацию и авторизацию */
+  }
+
+  .hamburger {
+    display: flex; /* Отображаем гамбургер */
+  }
+
+  .limit-panel,
+  .limit-info-title,
+  .limit-info-subtitle,
+  .limit-used-count,
+  .limit-total-count,
+  .logo img {
+    position: relative; /* Оставляем элементы без изменений */
+  }
+}
