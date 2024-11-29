@@ -35,7 +35,7 @@
 
 1. Клонируйте репозиторий:
     
-    git clone https://github.com/yourusername/SCAN_project_SF.git
+    git clone https://github.com/adoyenne/SCAN_project_SF.git
  
 
 2. Перейдите в каталог проекта:
